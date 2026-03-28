@@ -1,0 +1,16 @@
+.page { display: flex; flex-direction: column; gap: 28px; }
+
+.pageHeader {}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-1);
+}
+
+.pageSub {
+  color: var(--text-3);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
