@@ -1,0 +1,207 @@
+.page { display: flex; flex-direction: column; gap: 36px; }
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.heroHeading {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-1);
+  line-height: 1.2;
+}
+
+.heroName { color: var(--accent-2); }
+
+.heroSub {
+  color: var(--text-3);
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+.ctaBtn {
+  padding: 11px 22px;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  background: var(--accent-2);
+  box-shadow: 0 0 24px var(--accent-glow);
+  transform: translateY(-1px);
+}
+
+/* ── Stats ────────────────────────────────────────────────────── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.statCard {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.statCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--card-accent, var(--accent));
+  border-radius: 3px 3px 0 0;
+}
+
+.statCard:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.statIcon {
+  font-size: 1.4rem;
+  color: var(--card-accent, var(--accent));
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-1);
+  line-height: 1;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--text-3);
+  margin-top: 6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── Section ──────────────────────────────────────────────────── */
+.section {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.viewAll {
+  font-size: 0.85rem;
+  color: var(--accent-2);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.viewAll:hover { color: var(--text-1); }
+
+/* ── Recent List ──────────────────────────────────────────────── */
+.recentList { }
+
+.recentRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 28px;
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.recentRow:last-child { border-bottom: none; }
+.recentRow:hover { background: rgba(255,255,255,0.02); }
+
+.recentAvatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.recentInfo { flex: 1; overflow: hidden; }
+
+.recentName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-1);
+}
+
+.recentMeta {
+  font-size: 0.8rem;
+  color: var(--text-3);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recentYear {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-2);
+  background: rgba(108,99,255,0.12);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.emptyState {
+  padding: 48px;
+  text-align: center;
+  color: var(--text-3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.emptyState a {
+  color: var(--accent-2);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
